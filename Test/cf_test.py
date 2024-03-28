@@ -2,7 +2,6 @@
 # @File : cf_test.py
 # @Time : 2024/1/14 23:05
 # @Author : Helltractor
-from types import GeneratorType
 
 ImportType = 1
 InputType = 1
@@ -67,98 +66,14 @@ def main():
 
 
 def solve_A():
-    for _ in range(II()):
-        n = II()
-        q = LII()
-        p = sorted(q)
-        ans = 0
-        mid = p[(n + 1) // 2 - 1]
-        for i in range((n + 1) // 2 - 1, n):
-            if p[i] <= mid:
-                ans += mid - p[i] + 1
-        print(ans)
     return
 
 
 def solve_B():
-    for _ in range(II()):
-        n, k = MII()
-        a = LII()
-        MOD = 10 ** 9 + 7
-        cur = (1 << k) - 1
-        s = 0
-        ans = 0
-        cnt = 0
-        for i, x in enumerate(a):
-            s += x
-            if cnt + x > 0:
-                cnt += x
-            else:
-                cnt = 0
-            ans = max(ans, cnt)
-        print((ans * cur + s + MOD) % MOD)
     return
 
 
-def bootstrap(f, stack=[]):
-    def wrappedfunc(*args, **kwargs):
-        if stack:
-            return f(*args, **kwargs)
-        else:
-            to = f(*args, **kwargs)
-            while True:
-                if type(to) is GeneratorType:
-                    stack.append(to)
-                    to = next(to)
-                else:
-                    stack.pop()
-                    if not stack:
-                        break
-                    to = stack[-1].send(to)
-            return to
-
-    return wrappedfunc
-
-
 def solve_C():
-    for _ in range(II()):
-        n, k = MII()
-        g = [[] for _ in range(n + 1)]
-        for _ in range(n - 1):
-            u, v = MII()
-            g[u].append(v)
-            g[v].append(u)
-
-        def check(m):
-            ans = 0
-
-            @bootstrap
-            def dfs(x, fa):
-                nonlocal ans
-                c = 1
-                for y in g[x]:
-                    if y == fa:
-                        continue
-                    c += yield (dfs(y, x))
-                if c >= m:
-                    ans += 1
-                    c = 0
-                yield c
-
-            cc = dfs(1, 0)
-            if cc < m:
-                ans -= 1
-            return ans >= k
-
-        l = 1
-        r = n
-        while l <= r:
-            m = l + r >> 1
-            if check(m):
-                l = m + 1
-            else:
-                r = m - 1
-        print(r)
     return
 
 
