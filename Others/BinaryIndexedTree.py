@@ -1,5 +1,5 @@
 # _*_ coding: utf-8 _*_
-# @File : binary_indexed_tree.py
+# @File : BinaryIndexedTree.py
 # @Time : 2023/11/13 14:42
 # @Author : Helltrackor
 
