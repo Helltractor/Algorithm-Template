@@ -2,6 +2,7 @@
 # @File : primes.py
 # @Time : 2023/11/30 19:19
 # @Author : Helltractor
+from typing import List
 
 
 # fool idea
@@ -14,7 +15,7 @@ def fool_Primes(n):
 
 
 # 枚举
-def Primes_enumeration(n: int) -> list[int]:
+def Primes_enumeration(n: int) -> int:
     def isPrime(n):
         for i in range(2, n):
             if n % i == 0:
@@ -29,7 +30,7 @@ def Primes_enumeration(n: int) -> list[int]:
 
 
 # 枚举优化
-def Primes_enumeration_plus(n: int) -> list[int]:
+def Primes_enumeration_plus(n: int) -> int:
     def isPrime(n):
         for i in range(2, int(n ** 0.5) + 1):
             if n % i == 0:
@@ -57,7 +58,7 @@ def Primes_enumeration_plus(n: int) -> list[int]:
 """
 
 
-def Primes_Ealich(n: int) -> list[int]:
+def Primes_Ealich(n: int) -> int:
     primes = []
     is_prime = [False] * 2 + [True] * (n - 2)
     for i in range(2, n):
@@ -84,7 +85,7 @@ def Primes_Ealich(n: int) -> list[int]:
 """
 
 
-def Primes_linear(n: int) -> list[int]:
+def Primes_linear(n: int) -> int:
     primes = []
     is_prime = [False] * 2 + [True] * (n - 2)
     for i in range(2, n):
@@ -99,15 +100,15 @@ def Primes_linear(n: int) -> list[int]:
 
 # 统计每个数的质因子的个数
 """
-    cnt = [0] * n
+    count = [0] * n
     for i in range(2, n):
-        if cnt[i] == 0:
+        if count[i] == 0:
             for j in range(i, n, i):
-                cnt[j] += 1
+                count[j] += 1
 """
 
 
-def count_Prime_factor(n: int) -> list[int]:
+def count_Prime_factor(n: int) -> int:
     cnt = [0] * n
     for i in range(2, n):
         if cnt[i] == 0:
@@ -126,7 +127,7 @@ def count_Prime_factor(n: int) -> list[int]:
 """
 
 
-def Prime_factor(n: int) -> list[list[int]]:
+def Prime_factor(n: int) -> List[List[int]]:
     fac = [[] for _ in range(n)]
     for i in range(2, n):
         if not fac[i]:

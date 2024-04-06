@@ -16,8 +16,12 @@ class StringHash:
             h[i] = (h[i - 1] * BASE + ord(s[i - 1])) % MOD
 
     # 用O(1)时间获取闭区间[l,r]（即s[l:r]）的哈希值，比切片要快
-    def get(self, l, r):
+    def get_hash(self, l, r):
         return (self.h[r + 1] - self.h[l] * self.p[r - l + 1]) % self.MOD
+
+    # 获取 s[l1:r1+1] 和 s[l2:r2+1] 拼接的哈希值，要求不能有重叠部分，且有先后顺序
+    def get_addhash(self, l1, r1, l2, r2):
+        return (self.get_hash(l1, r1) * self.p[r2 - l2 + 1] + self.get_hash(l2, r2)) % self.MOD
 
 
 class Hash:

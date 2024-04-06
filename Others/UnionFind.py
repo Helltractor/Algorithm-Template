@@ -23,10 +23,10 @@ class UF:
         self.parent[x] = self.find(self.parent[x])
         return self.parent[x]
 
-    FALSE   # 查询（路径压缩，简写）
-        def find(self, x: int):
-            return x if x == self.parent[x] \
-                else self.parent[x] = self.find(self.parent[x])
+    # 查询（路径压缩，简写）
+    def find(self, x: int):
+        return x if x == self.parent[x] \
+            else self.parent[x] = self.find(self.parent[x])
 
     # 合并
     def union(self, i: int, j: int):

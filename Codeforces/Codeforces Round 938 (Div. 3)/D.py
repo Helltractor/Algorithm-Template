@@ -68,3 +68,33 @@ if InputType:
 if ConstType:
     RD = random.randint(10 ** 9, 2 * 10 ** 9)
     MOD = 998244353
+
+
+def main():
+    for _ in range(II()):
+        n, m, k = MII()
+        a = LII()
+        b = LII()
+        cnt = Counter(b)
+        delta = 0
+        for i in range(m):
+            if a[i] in cnt:
+                if cnt[a[i]] > 0:
+                    delta += 1
+                cnt[a[i]] -= 1
+        ans = int(delta >= k)
+        for i in range(m, n):
+            if a[i - m] in cnt:
+                if cnt[a[i - m]] >= 0:
+                    delta -= 1
+                cnt[a[i - m]] += 1
+            if a[i] in cnt:
+                if cnt[a[i]] > 0:
+                    delta += 1
+                cnt[a[i]] -= 1
+            ans += int(delta >= k)
+        print(ans)
+    return
+
+
+main()
