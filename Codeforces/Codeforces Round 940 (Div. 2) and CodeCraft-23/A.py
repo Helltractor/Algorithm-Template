@@ -11,7 +11,7 @@ if ImportType:
     from bisect import bisect_left, bisect_right
     from collections import Counter, defaultdict, deque
     from itertools import accumulate, combinations, permutations
-    from heapq import heapify, heappop, heappush
+    from heapq import heapify, heappop, heappush, heappushpop
     from typing import Generic, Iterable, Iterator, TypeVar, Union, List
     from string import ascii_lowercase, ascii_uppercase, digits
     from math import ceil, floor, sqrt, pi, factorial, gcd, log, log10, log2, inf
