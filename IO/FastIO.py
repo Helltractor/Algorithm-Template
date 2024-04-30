@@ -1,16 +1,11 @@
 # _*_ coding: utf-8 _*_
-# @File : niuke_test.py
-# @Time : 2024/3/11 16:32
+# @File : FastIO.py
+# @Time : 2024/4/30 21:09
 # @Author : Helltractor
 
 import os
-import random
 import sys
-# from math import gcd, lcm, comb
-from io import BytesIO, IOBase
-
-
-# from sortedcontainers import SortedSet, SortedList, SortedDict
+from io import IOBase, BytesIO
 
 
 class FastIO(IOBase):
@@ -60,36 +55,3 @@ class IOWrapper(IOBase):
 BUFSIZE = 4096
 sys.stdin = IOWrapper(sys.stdin)
 sys.stdout = IOWrapper(sys.stdout)
-input = lambda: sys.stdin.readline().rstrip("\r\n")
-
-
-def I():
-    return input()
-
-
-def II():
-    return int(input())
-
-
-def MII():
-    return map(int, input().split())
-
-
-def LI():
-    return list(input().split())
-
-
-def LII():
-    return list(map(int, input().split()))
-
-
-def GMI():
-    return map(lambda x: int(x) - 1, input().split())
-
-
-def LGMI():
-    return list(map(lambda x: int(x) - 1, input().split()))
-
-
-rd = random.randint(10 ** 9, 2 * 10 ** 9)
-MOD = 998244353
