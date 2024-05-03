@@ -37,7 +37,8 @@ if ConstType:
 def main():
     for _ in range(II()):
         n = II()
-        ans = [(1, 1), (1, 2)] + [(i, i) for i in range(min(n, 3), n)]
+        ans = [(1, 1), (1, 2)] + [(i, i) for i in range(min(n, 3), n + 1)]
+        # print(ans)
         for i in range(n):
             print(*ans[i])
         print()
