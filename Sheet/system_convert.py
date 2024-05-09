@@ -1,7 +1,9 @@
 # _*_ coding: utf-8 _*_
-# @File : SystemConvert.py
+# @File : system_convert.py
 # @Time : 2024/4/6 21:04
 # @Author : Helltractor
+import unittest
+
 
 class SystemConvert:
     """
@@ -46,7 +48,10 @@ class SystemConvert:
             n -= tmp
         return 0, 0
 
+class TestGeneral(unittest.TestCase):
+    def test(self):
+        assert SystemConvert.convert(10, 2) == '1010'
+        return
 
 if __name__ == '__main__':
-    sh = SystemConvert()
-    print(sh.calculate_count(10, 10))
+    TestGeneral().main()
