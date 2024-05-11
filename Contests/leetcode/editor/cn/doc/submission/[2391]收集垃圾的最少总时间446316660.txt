@@ -1,0 +1,23 @@
+class Solution:
+    def garbageCollection(self, garbage: List[str], travel: List[int]) -> int:
+        temp = Counter(s for c in garbage for s in c)
+        ret = 0
+        for i, s in enumerate(garbage):
+            ret += len(s)
+            for c in ['G', 'M', 'P']:
+                if temp[c] > 0:
+                    temp[c] -= s.count(c)
+                    ret += travel[i-1] if i > 0 else 0
+        return ret
+
+class Solution:
+    def garbageCollection(self, garbage: List[str], travel: List[int]) -> int:
+        ret = 0
+        temp = {}
+        for i, s in enumerate(garbage):
+            ret += len(s)
+            for c in s:
+                temp[c] = i
+        return ret + sum(sum(travel[:r]) for r in temp.values())
+# runtime:152 ms
+# memory:36.7 MB
