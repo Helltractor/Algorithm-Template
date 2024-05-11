@@ -1,6 +1,6 @@
 # Algorithm-template
 
-## Contest Website
+## Online Judge Website
 - [AtCoder](https://atcoder.jp/)
 - [Codeforces](https://codeforces.com/)
 - [LeetCode](https://leetcode.com/)
