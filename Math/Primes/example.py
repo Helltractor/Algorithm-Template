@@ -1,9 +1,9 @@
 import time
 import unittest
 
-from Sheet.Primes.primes_linear import Linear
-from Sheet.Primes.primes_simple import Primes
-from Sheet.Primes.primes_ealich import Ealich
+from Math.Primes.primes_linear import Linear
+from Math.Primes.primes_simple import Primes
+from Math.Primes.primes_ealich import Ealich
 
 
 class MyTestCase(unittest.TestCase):

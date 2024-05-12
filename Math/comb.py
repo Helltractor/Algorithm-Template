@@ -2,34 +2,30 @@
 # @File : comb.py
 # @Time : 2024/4/22 10:40
 # @Author : Helltractor
+# @Description : Combination number
 
-# template for calculating combination number
-"""
-mod = pow(10, 9) + 7
-l = 3 * pow(10, 5) + 5
-fact = [1] * (l + 1)
-for i in range(1, l + 1):
-    fact[i] = i * fact[i - 1] % mod
-inv = [1] * (l + 1)
-inv[l] = pow(fact[l], mod - 2, mod)
-for i in range(l - 1, -1, -1):
-    inv[i] = (i + 1) * inv[i + 1] % mod
-def comb(n, r):
-    return fact[n] * inv[r] % mod * inv[n - r] % mod if n >= r >= 0 else 0
-"""
+# mod = pow(10, 9) + 7
+# l = 3 * pow(10, 5) + 5
+# fact = [1] * (l + 1)
+# inv = [1] * (l + 1)
+# inv[l] = pow(fact[l], mod - 2, mod)
+# for i in range(l):
+#     fact[i + 1] = i * fact[i] % mod
+#     inv[l - i - 1] = inv[l - i] * (l - i) % mod
+# def comb(n, r):
+#     return fact[n] * inv[r] % mod * inv[n - r] % mod if n >= r >= 0 else 0
 
-mod = pow(10, 9) + 7  # 定义模数
-l = 3 * pow(10, 5) + 5  # 定义上限
-fact = [1] * (l + 1)  # 初始化阶乘列表
-for i in range(1, l + 1):
-    fact[i] = i * fact[i - 1] % mod  # 计算阶乘并取模
+class Comb:
+    
+    def __init__(self):
+        self.mod = pow(10, 9) + 7
+        self.l = 3 * pow(10, 5) + 5
+        self.fact = [1] * (self.l + 1)
+        self.inv = [1] * (self.l + 1)
+        self.inv[self.l] = pow(self.fact[self.l], self.mod - 2, self.mod)
+        for i in range(self.l):
+            self.fact[i + 1] = i * self.fact[i] % self.mod
+            self.inv[self.l - i - 1] = self.inv[self.l - i] * (self.l - i) % self.mod
 
-inv = [1] * (l + 1)  # 初始化模逆元列表
-inv[l] = pow(fact[l], mod - 2, mod)  # 计算最大阶乘的模逆元
-for i in range(l - 1, -1, -1):
-    inv[i] = (i + 1) * inv[i + 1] % mod  # 计算其他阶乘的模逆元
-
-# 计算组合数 C(n, r)
-def comb(n, r):
-    # 计算组合数 C(n, r)，如果 n >= r >= 0 则返回结果，否则返回 0
-    return fact[n] * inv[r] % mod * inv[n - r] % mod if n >= r >= 0 else 0
+    def comb(self, n, r):
+        return self.fact[n] * self.inv[r] % self.mod * self.inv[n - r] % self.mod if n >= r >= 0 else 0

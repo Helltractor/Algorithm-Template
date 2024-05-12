@@ -4,12 +4,12 @@
 
 ### [Kaggle](https://www.kaggle.com/competitions)
 ### [Codeforces](https://codeforces.com/contests)   
-- [pypy](https://github.com/Helltractor/Algorithm-template/blob/e269eb0e9338122aa19dcb04df0befbdb72e6dd3/Contests/codeforces/Template/pypy)
+- [pypy](https://github.com/Helltractor/Algorithm-template/blob/ad9d55c7d359944b4d210e255956b6fe79f08082/Contests/codeforces/Template/pypy)
 ### [AtCoder](https://atcoder.jp/contests/)
 ### [LeetCode](https://leetcode.com/contest/)
 ### [NowCoder](https://ac.nowcoder.com/)
-- [pypy](https://github.com/Helltractor/Algorithm-template/blob/e269eb0e9338122aa19dcb04df0befbdb72e6dd3/Contests/nowcode/pypy)
-- [python](https://github.com/Helltractor/Algorithm-template/blob/e269eb0e9338122aa19dcb04df0befbdb72e6dd3/Contests/nowcode/python)
+- [pypy](https://github.com/Helltractor/Algorithm-template/blob/ad9d55c7d359944b4d210e255956b6fe79f08082/Contests/nowcode/pypy)
+- [python](https://github.com/Helltractor/Algorithm-template/blob/ad9d55c7d359944b4d210e255956b6fe79f08082/Contests/nowcode/python)
 
 ## Algorithm Template
 
@@ -36,6 +36,8 @@
 ### Bloggers
 
 - [灵茶山艾府](https://space.bilibili.com/206214)
+- [AlbertShen](https://space.bilibili.com/19260126)
+- [Hucci写代码](https://space.bilibili.com/1318868)
 
 ### Compilation
 
