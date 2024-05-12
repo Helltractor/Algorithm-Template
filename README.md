@@ -1,13 +1,6 @@
 # Algorithm-template
 
-## Online Judge
-- [AtCoder](https://atcoder.jp/)
-- [Codeforces](https://codeforces.com/)
-- [LeetCode](https://leetcode.com/)
-- [NowCoder](https://ac.nowcoder.com/)
-- [Luogu](https://www.luogu.com.cn/)
-
-## Contests
+## Contests (Online Judge)
 
 ### [Kaggle](https://www.kaggle.com/competitions)
 ### [Codeforces](https://codeforces.com/contests)   
