@@ -36,7 +36,7 @@ if ImportType:
 
 if InputType:
     input = lambda: sys.stdin.readline().rstrip("\r\n")
-    I = lambda: int(input())
+    I = lambda: input()
     II = lambda: int(input())
     MII = lambda: map(int, input().split())
     LI = lambda: list(input().split())
@@ -47,5 +47,16 @@ if InputType:
 if ConstType:
     RD = random.randint(10 ** 9, 2 * 10 ** 9)
     MOD = 998244353
+    INF = 10 ** 18
     Y = "Yes"
     N = "No"
+
+def solve():
+    return
+
+def main():
+    solve()
+    return
+
+if __name__ == "__main__":
+    main()

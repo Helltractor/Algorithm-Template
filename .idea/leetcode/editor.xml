@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="LeetcodeEditor">
+    <option name="projectConfig">
+      <map>
+        <entry key="$PROJECT_DIR$/Contests/leetcode/editor/cn/[2391]收集垃圾的最少总时间.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/Contests/leetcode/editor/cn/doc/content/[2391]收集垃圾的最少总时间.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2391" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/Contests/leetcode/editor/cn/[2391]收集垃圾的最少总时间.py" />
+              <option name="titleSlug" value="minimum-amount-of-time-to-collect-garbage" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

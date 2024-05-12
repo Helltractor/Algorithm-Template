@@ -9,11 +9,14 @@
 
 ## Contests
 
-- [Kaggle](https://www.kaggle.com/competitions)
-- [Codeforces](https://codeforces.com/contests)
-- [AtCoder](https://atcoder.jp/contests/)
-- [LeetCode](https://leetcode.com/contest/)
-- [NowCoder](https://ac.nowcoder.com/)
+### [Kaggle](https://www.kaggle.com/competitions)
+### [Codeforces](https://codeforces.com/contests)   
+- [pypy](https://github.com/Helltractor/Algorithm-template/blob/e269eb0e9338122aa19dcb04df0befbdb72e6dd3/Contests/codeforces/Template/pypy)
+### [AtCoder](https://atcoder.jp/contests/)
+### [LeetCode](https://leetcode.com/contest/)
+### [NowCoder](https://ac.nowcoder.com/)
+- [pypy](https://github.com/Helltractor/Algorithm-template/blob/e269eb0e9338122aa19dcb04df0befbdb72e6dd3/Contests/nowcode/pypy)
+- [python](https://github.com/Helltractor/Algorithm-template/blob/e269eb0e9338122aa19dcb04df0befbdb72e6dd3/Contests/nowcode/python)
 
 ## Algorithm Template
 
