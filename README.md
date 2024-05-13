@@ -37,7 +37,7 @@
 
 - [灵茶山艾府](https://space.bilibili.com/206214)
 - [AlbertShen](https://space.bilibili.com/19260126)
-- [Hucci写代码](https://space.bilibili.com/1318868)
+- [Hucci 写代码](https://space.bilibili.com/1318868)
 
 ### Compilation
 
