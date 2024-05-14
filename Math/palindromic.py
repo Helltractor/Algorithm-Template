@@ -17,6 +17,7 @@ class Palindromic:
             pal.append(int(s + s[::-1]))
             pal.append(int(s + s[::-1][1:]))
         pal.sort()
+        return pal
 
     @staticmethod
     def convert_by_number():
@@ -41,4 +42,5 @@ class Palindromic:
                         t //= 10
                     pal.append(x)
             base *= 10
-        pal.append(10 ** 9 + 1)     # 哨兵，防止下标越界
+        pal.append(10 ** 8 + 1)     # 哨兵，防止下标越界
+        return pal

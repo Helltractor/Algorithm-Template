@@ -4,7 +4,7 @@
 # @Author : Helltractor
 
 # 快速幂（迭代版）
-def fast_power(x: int, y: int, mod: int = 1) -> float:
+def fast_power(x: int, y: int, mod: int = 31) -> float:
     ans = 1.0
     while y:
         if y % 2:
@@ -14,7 +14,7 @@ def fast_power(x: int, y: int, mod: int = 1) -> float:
     return ans
 
 # 快速幂（递归版）
-def fast_power_rec(x: int, y: int, mod: int = 1) -> float:
+def fast_power_rec(x: int, y: int, mod: int = 31) -> float:
     if y == 0:
         return 1.0
     ans = fast_power_rec(x, y // 2) % mod
