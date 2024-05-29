@@ -35,32 +35,34 @@ if ConstType:
     N = "No"
 
 
+# 时间复杂度： O(m + q + (q + m)logq) ≈ O((q + m)logq)
+def check(i, a, b, n):
+    pre = [0] * (n + 1)
+    for j in b[:i]:
+        pre[j] = 1
+    for j in range(n):
+        pre[j + 1] += pre[j]
+    for l, r in a:
+        if (pre[r + 1] - pre[l]) * 2 > r - l + 1:
+            return True
+    return False
+
 def cf_1843E():
     for _ in range(II()):
         n, m = MII()
         a = [LGMI() for _ in range(m)]
         q = II()
         b = [II() for _ in range(q)]
-        def check(i):
-            pre = [0] * (n + 1)
-            for j in b[:i]:
-                pre[j] = 1
-            for j in range(n):
-                pre[j + 1] += pre[j]
-            for l, r in a:
-                if (pre[r + 1] - pre[l]) * 2 > r - l + 1:
-                    return True
-            return False
         l = 1
         r = q
         while l <= r:
             mid = l + r >> 1
-            if check(mid):
+            if check(mid, a, b, n):
                 r = mid - 1
             else:
                 l = mid + 1
         print(l if l <= q else -1)
-        
+    
     return
 
 
