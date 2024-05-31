@@ -34,41 +34,55 @@ if ConstType:
     Y = "Yes"
     N = "No"
 
+# 4
+# 1 0
+# 2 1
+# 1 2
+# 0 2
+# 4 5 5
+# 5 4 1
+# 1 2
+# 2 1 5 4
+# 5 2 3 1
+# 3 1
+# 4 3 3 4 1
+# 5 5 4 5 2
 
-def cf_1796D():
+
+def cf_C():
     for _ in range(II()):
-        n, k, x = MII()
+        n, m = MII()
         a = LII()
-        if x < 0:
-            x = -x
-            k = n - k
-        ans = -10 ** 18
-        pre = pre_ = min_pre = 0
-        for i in range(n):
-            pre += a[i] - x
-            if i >= k:
-                ans = max(ans, pre - min_pre + 2 * x * k)
-                pre_ += a[i - k] - x
-                min_pre = min(min_pre, pre_)
-                
-        s = [0] * (n + 1)
-        for i in range(n):
-            s[i + 1] = s[i] + a[i] + x
-        q = deque([0])
-        for i in range(1, n + 1):
-            if q[0] < i - k:
-                q.popleft()
-            while q and s[q[-1]] >= s[i]:
-                q.pop()
-            q.append(i)
-            ans = max(ans, s[i] - s[q[0]])
-        print(ans)
+        b = LII()
+        s = n + m + 1
+        c = []
+        d = []
+        for i, (x, y) in enumerate(zip(a, b)):
+            if x > y:
+                c.append(i)
+            else:
+                d.append(i)
+        cur = c + d[::-1]
+        pre_a = [0] * (s + 1)
+        pre_b = [0] * (s + 1)
+        for i in range(s):
+            pre_a[i + 1] = pre_a[i] + a[cur[i]]
+            pre_b[i + 1] = pre_b[i] + b[cur[i]]
+        ans = [0] * s
+        for i, x in enumerate(cur):
+            if i < n:
+                ans[x] = pre_a[n + 1] - a[x] + pre_b[s] - pre_b[n + 1]
+            elif i == n:
+                ans[x] = pre_a[n] + pre_b[s] - pre_b[n + 1]
+            else:
+                ans[x] = pre_a[n] + pre_b[s] - pre_b[n] - b[x]
         
+        print(*ans)
     return
 
 
 def main():
-    cf_1796D()
+    cf_C()
     return
 
 

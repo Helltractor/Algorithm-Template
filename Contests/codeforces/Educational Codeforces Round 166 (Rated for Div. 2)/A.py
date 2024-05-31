@@ -35,40 +35,33 @@ if ConstType:
     N = "No"
 
 
-def cf_1796D():
+def cf_A():
     for _ in range(II()):
-        n, k, x = MII()
-        a = LII()
-        if x < 0:
-            x = -x
-            k = n - k
-        ans = -10 ** 18
-        pre = pre_ = min_pre = 0
-        for i in range(n):
-            pre += a[i] - x
-            if i >= k:
-                ans = max(ans, pre - min_pre + 2 * x * k)
-                pre_ += a[i - k] - x
-                min_pre = min(min_pre, pre_)
-                
-        s = [0] * (n + 1)
-        for i in range(n):
-            s[i + 1] = s[i] + a[i] + x
-        q = deque([0])
-        for i in range(1, n + 1):
-            if q[0] < i - k:
-                q.popleft()
-            while q and s[q[-1]] >= s[i]:
-                q.pop()
-            q.append(i)
-            ans = max(ans, s[i] - s[q[0]])
-        print(ans)
-        
+        n = II()
+        s = I()
+        a = []
+        b = []
+        flag = True
+        for i, c in enumerate(s):
+            if c.isalpha():
+                a.append(c)
+            else:
+                if len(a):
+                    flag = False
+                    break
+                b.append(c)
+        if flag:
+            if ''.join(sorted(b)) == s[: len(b)] and ''.join(sorted(a)) == s[len(b) :]:
+                print(Y)
+            else:
+                print(N)
+        else:
+            print(N)
     return
 
 
 def main():
-    cf_1796D()
+    cf_A()
     return
 
 

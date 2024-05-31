@@ -34,41 +34,74 @@ if ConstType:
     Y = "Yes"
     N = "No"
 
-
-def cf_1796D():
+def abc354_f():
     for _ in range(II()):
-        n, k, x = MII()
+        n = II()
         a = LII()
-        if x < 0:
-            x = -x
-            k = n - k
-        ans = -10 ** 18
-        pre = pre_ = min_pre = 0
+        pre = [0] * n
+        suf = [0] * n
+        g = []
+        for i, x in enumerate(a):
+            idx = bisect_left(g, x)
+            if idx < len(g):
+                g[idx] = x
+            else:
+                g.append(x)
+            pre[i] = idx + 1
+        g = []
+        for i in range(n - 1, -1, -1):
+            v = -a[i]
+            idx = bisect_left(g, v)
+            if idx < len(g):
+                g[idx] = v
+            else:
+                g.append(v)
+            suf[i] = idx + 1
+        ans = []
         for i in range(n):
-            pre += a[i] - x
-            if i >= k:
-                ans = max(ans, pre - min_pre + 2 * x * k)
-                pre_ += a[i - k] - x
-                min_pre = min(min_pre, pre_)
-                
-        s = [0] * (n + 1)
-        for i in range(n):
-            s[i + 1] = s[i] + a[i] + x
-        q = deque([0])
-        for i in range(1, n + 1):
-            if q[0] < i - k:
-                q.popleft()
-            while q and s[q[-1]] >= s[i]:
-                q.pop()
-            q.append(i)
-            ans = max(ans, s[i] - s[q[0]])
-        print(ans)
-        
+            if pre[i] + suf[i] - 1 == len(g):
+                ans.append(i + 1)
+        print(len(ans))
+        print(*ans)
+
+def cf_486E():
+    n = II()
+    a = LII()
+    pre = [0] * n
+    suf = [0] * n
+    ans = ['1'] * n
+    g = []
+    for i, x in enumerate(a):
+        idx = bisect_left(g, x)
+        if idx < len(g):
+            g[idx] = x
+        else:
+            g.append(x)
+        pre[i] = idx + 1
+    g = []
+    for i in range(n - 1, -1, -1):
+        v = -a[i]
+        idx = bisect_left(g, v)
+        if idx < len(g):
+            g[idx] = v
+        else:
+            g.append(v)
+        suf[i] = idx + 1
+    cnt = [0] * (n + 1)
+    for i in range(n):
+        if pre[i] + suf[i] - 1 == len(g):
+            ans[i] = '3'
+            cnt[pre[i]] += 1
+    for i in range(n):
+        if ans[i] == '3' and cnt[pre[i]] > 1:
+            ans[i] = '2'
+    print(''.join(ans))
     return
 
 
 def main():
-    cf_1796D()
+    # cf_486E()
+    abc354_f()
     return
 
 
