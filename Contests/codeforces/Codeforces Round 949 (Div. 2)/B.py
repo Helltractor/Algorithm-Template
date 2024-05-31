@@ -52,18 +52,6 @@ def cf_B():
 
 def main():
     cf_B()
-    # tmp = list(range(32))
-    # for _ in range(8):
-    #     a = tmp.copy()
-    #     for i in range(len(tmp)):
-    #         if i == 0:
-    #             tmp[i] |= a[i + 1]
-    #         elif i + 1 < len(tmp):
-    #             tmp[i] |= a[i - 1] | a[i + 1]
-    #         else:
-    #             tmp[i] |= a[i - 1]
-    #     print(tmp)
-        
     return
 
 
