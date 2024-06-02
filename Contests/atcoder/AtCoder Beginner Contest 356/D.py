@@ -42,11 +42,11 @@ def abc_D():
     ans = 0
     for i in range(64):
         if m >> i & 1:
-            mod = 1 << (i + 1)
-            q, r = divmod(n + 1, mod)
-            ans += q * mod // 2
-            if r > mod // 2:
-                ans += r - mod // 2
+            mod = 1 << i
+            q, r = divmod(n + 1, mod * 2)
+            ans += q * mod
+            if r > mod:
+                ans += r - mod
             
     print(ans % MOD)
     
