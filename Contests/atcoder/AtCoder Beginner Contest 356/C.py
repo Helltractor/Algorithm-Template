@@ -37,20 +37,29 @@ if ConstType:
 
 def abc_C():
     n, m, k = MII()
-    c = []
     a = []
-    r = []
-    for _ in range(m):
-        cc, *aa, rr = LI()
-        c.append(int(cc))
-        a.append(list(map(int, aa)))
-        r.append(rr)
-    print(c, a, r)
+    r = [False] * m
+    for i in range(m):
+        _, *aa, rr = LI()
+        tmp = 0
+        for x in aa:
+            tmp |= 1 << (int(x) - 1)
+        a.append(tmp)
+        r[i] = rr == 'o'
+    ans = 0
+    for x in range(1 << n):
+        tmp = 1
+        for i, y in enumerate(a):
+            if (bin(y & x).count('1') >= k) != r[i]:
+                tmp = 0
+                break
+        ans += tmp
+    print(ans)
     return
 
 
 def main():
-    cf_C()
+    abc_C()
     return
 
 
