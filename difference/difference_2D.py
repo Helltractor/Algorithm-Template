@@ -1,8 +1,9 @@
 # _*_ coding: utf-8 _*_
-# @File : diff2_array.py
+# @File : difference_2D.py
 # @Time : 2023/12/14 13:20
 # @Author : Helltractor
-class diff_array:
+
+class Difference2D:
     def __init__(self, m, n):
         self.m = m
         self.n = n

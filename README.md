@@ -4,12 +4,12 @@
 
 - [Kaggle](https://www.kaggle.com/competitions)
 - [Codeforces](https://codeforces.com/contests)   
-  - [pypy](https://github.com/Helltractor/Algorithm-template/blob/ad9d55c7d359944b4d210e255956b6fe79f08082/Contests/codeforces/Template/pypy)
+  - [pypy](__contest__/codeforces/Template/pypy)
 -  [AtCoder](https://atcoder.jp/contests/)
 - [LeetCode](https://leetcode.com/contest/)
 -  [NowCoder](https://ac.nowcoder.com/)
-    - [pypy](https://github.com/Helltractor/Algorithm-template/blob/ad9d55c7d359944b4d210e255956b6fe79f08082/Contests/nowcode/pypy)
-    - [python](https://github.com/Helltractor/Algorithm-template/blob/ad9d55c7d359944b4d210e255956b6fe79f08082/Contests/nowcode/python)
+    - [pypy](__contest__/nowcode/pypy)
+    - [python](__contest__/nowcode/python)
 
 ## Algorithm Template
 
@@ -20,7 +20,8 @@
 ### Python
 
 - [算法通关手册（LeetCode）](https://algo.itcharge.cn/)
-- [Templates, Examples and Problems Of Data Structure and Algorithm](https://github.com/liupengsay/PyIsTheBestLang)
+- [PyIsTheBestLang](https://github.com/liupengsay/PyIsTheBestLang)
+- [ac-library-python](https://github.com/not522/ac-library-python/)
 
 ### Java
 
@@ -51,7 +52,7 @@
 - [rating](https://zerotrac.github.io/leetcode_problem_rating/#/)
 - [Predicted Contests](https://lccn.lbao.site/)
 
-## Problemset
+## ProblemSet
 
 ### Codeforces
 

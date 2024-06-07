@@ -1,12 +1,13 @@
 # _*_ coding: utf-8 _*_
-# @File : prefix2_sum.py
+# @File : prefix_sum_2D.py
 # @Time : 2023/12/14 13:13
 # @Author : Helltractor
 from typing import List
 
 
-class prefix_sum:
-    # 二维前缀和
+class PrefixSum2D:
+    """二维前缀和"""
+    
     def __init__(self, mat: List[List[int]]):
         m, n = len(mat), len(mat[0])
         self.pre = [[0] * (n + 1) for _ in range(m + 1)]
@@ -21,8 +22,9 @@ class prefix_sum:
         return pre[r2 + 1][c2 + 1] - pre[r2 + 1][c1] - pre[r1][c2 + 1] + pre[r1][c1]
 
 
-class prefix_sum_:
-    # 二维前缀和
+class PrefixSum2D_:
+    """二维前缀和"""
+    
     def __init__(self, mat: List[List[int]]):
         m, n = len(mat), len(mat[0])
         self.pre = [[0] * (n + 1) for _ in range(m + 1)]

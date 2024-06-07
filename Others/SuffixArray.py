@@ -2,6 +2,8 @@
 # @File : SuffixArray.py
 # @Time : 2024/4/6 17:45
 # @Author : Helltractor
+from collections import defaultdict
+
 
 class SuffixArray:
     def sa_naive(self, s):  # 实现了最朴素的后缀数组构建算法，其时间复杂度为 O(n^2 log n)，适用于小规模字符串。
