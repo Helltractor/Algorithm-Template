@@ -54,6 +54,10 @@
 
 ## ProblemSet
 
+### User
+
+- [EndlessCheng](https://leetcode.cn/u/endlesscheng/)
+- [ProfSnail](https://leetcode.cn/u/profsnail/)
 ### Codeforces
 
 - [ACodeDaily](https://www.acodedaily.com/)
