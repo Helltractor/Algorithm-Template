@@ -6,14 +6,15 @@
 
 # mod = pow(10, 9) + 7
 # l = 3 * pow(10, 5) + 5
-# fact = [1] * (l + 1)
+# fac = [1] * (l + 1)
 # inv = [1] * (l + 1)
-# inv[l] = pow(fact[l], mod - 2, mod)
-# for i in range(l):
-#     fact[i + 1] = i * fact[i] % mod
-#     inv[l - i - 1] = inv[l - i] * (l - i) % mod
+# for i in range(1, l + 1):
+#     fac[i] = fac[i - 1] * i % mod
+# inv[l] = pow(fac[l], mod - 2, mod)
+# for i in range(l - 1, -1, -1):
+#     inv[i] = inv[i + 1] * (i + 1) % mod
 # def comb(n, r):
-#     return fact[n] * inv[r] % mod * inv[n - r] % mod if n >= r >= 0 else 0
+#     return fac[n] * inv[r] % mod * inv[n - r] % mod if n >= r >= 0 else 0
 
 class Comb:
     
@@ -22,10 +23,11 @@ class Comb:
         self.l = 3 * pow(10, 5) + 5
         self.fact = [1] * (self.l + 1)
         self.inv = [1] * (self.l + 1)
+        for i in range(1, self.l + 1):
+            self.fact[i] = self.fact[i - 1] * i % self.mod
         self.inv[self.l] = pow(self.fact[self.l], self.mod - 2, self.mod)
-        for i in range(self.l):
-            self.fact[i + 1] = i * self.fact[i] % self.mod
-            self.inv[self.l - i - 1] = self.inv[self.l - i] * (self.l - i) % self.mod
+        for i in range(self.l - 1, -1, -1):
+            self.inv[i] = self.inv[i + 1] * (i + 1) % self.mod
 
     def comb(self, n, r):
         return self.fact[n] * self.inv[r] % self.mod * self.inv[n - r] % self.mod if n >= r >= 0 else 0
